@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/Style.css" />
+  </head>
+  <body>
+    <!-- this is overlay -->
+    <div class="overlay"></div>
+    <div
+      class="page w-75 container-fluid my-5 d-flex flex-column justify-content-center align-items-center position-relative"
+    >
+      <div class="paragraph">
+        <h1 class="text-center">Bookmark</h1>
+      </div>
+      <div class="line my-5"></div>
+      <div class="sites">
+        <!-- <i class="fa-solid fa-bookmark" id="right"></i> -->
+        <h3 class="text-center">Bookmark your favorite sites</h3>
+        <!-- <i class="fa-solid fa-bookmark" id="left"></i> -->
+      </div>
+    </div>
+    <div
+      class="w-75 container-fluid my-5 d-flex flex-column justify-content-center align-items-center"
+    >
+      <div class="mb-3 w-100">
+        <label for="exampleFormControlInput1" class="form-label fw-bold"
+          >Site Name</label
+        >
+        <input
+          type="text"
+          class="form-control is-invalid"
+          id="siteNameInput"
+          placeholder="Bookmark Name"
+        />
+      </div>
+      <div class="mb-3 w-100">
+        <label for="exampleFormControlInput1" class="form-label fw-bold"
+          >Site URL</label
+        >
+        <input
+          type="text"
+          class="form-control is-invalid"
+          id="siteUrlInput"
+          placeholder="Website URL"
+        />
+      </div>
+      <div>
+        <button id="Submit" onclick="addSite()" class="btn btn-danger">
+          Submit
+        </button>
+      </div>
+      <div class="line my-5"></div>
+    </div>
+    <div class="w-75 container-fluid my-5">
+      <div
+        class="table-responsive w-100 d-flex justify-content-center align-items-center"
+      >
+        <table class="table my-5 align-middle">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Website Name</th>
+              <th>visit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <!-- this model -->
+    <div
+      class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none"
+      style="backdrop-filter: blur(5px)"
+    >
+      <div
+        style="background-color: white"
+        class="box-conent p-4 rounded-2 shadow-lg"
+      >
+        <header
+          class="box-header bg-transparent w-100 d-flex justify-content-between align-items-center mb-4"
+        >
+          <i
+            class="fa-solid fa-triangle-exclamation"
+            style="color: #756e8c; font-size: 60px"
+          ></i>
+          <h2 style="color: #756e8c; font-style: italic">WARNING</h2>
+          <button class="btn border-0" id="closeBtn">
+            <i class="fa-solid fa-xmark close fs-3" id="closebtn"></i>
+          </button>
+        </header>
+        <p class="m-0 pb-2">
+          Site Name or Url is not valid, Please follow the rules below :
+        </p>
+        <ol class="rules list-unstyled m-0">
+          <li>
+            <i class="fa-regular fa-circle-right p-2"></i>Site name must contain
+            at least 3 characters
+          </li>
+          <li>
+            <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+            valid one
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
